@@ -1,0 +1,30 @@
+.img-size{
+  width: 300px;
+}
+
+.box-deco{
+  width: 400px;
+  height: 500px;
+  border: 5px solid pink;
+  text-align: center;
+  margin: 20px;
+}
+
+.box-two{
+  display: flex;
+  justify-content: center;
+}
+
+.main{
+  text-align: center;
+
+}
+
+button{
+  border: none ;
+  color:#fff;
+  background-color: black;
+  font-size: 26px;
+  padding: 10px 16px;
+  margin: 5px;
+}
