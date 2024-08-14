@@ -21,18 +21,45 @@ paper:{
 function App() {
   
 const[userSelect, setUserSelect] = useState(null)
+const[comSelect, setComSelect] = useState(null)
+const[gameResult, setGameResult] = useState("")
 
-let play=(pick)=>{
+
+
+const play=(pick)=>{
   setUserSelect(choice[pick]) 
 
+  let comChoice=computerPick() //여기틀림
+  setComSelect(comChoice)//여기틀림
+
+  setGameResult(judgment(choice[pick],comChoice))
   
 }
 
 
+const computerPick=()=>{
+  let arrayGame = Object.keys(choice);
+  let randomNum = Math.floor(Math.random() * arrayGame.length);
+  let final = arrayGame[randomNum]; 
+  return choice[final]; 
+}
+
+
+const judgment=(a,b)=>{
+  if(a.name == b.name){
+    return "TIE";
+  }else if (a.name=="Rock") return b.name =="Scissors" ? "WIN" : "LOSE";
+  else if (a.name=="Paper") return b.name =="Rock" ? "WIN" : "LOSE";
+  else if (a.name=="Scissors") return b.name =="Paper" ? "WIN" : "LOSE"
+
+}
+
+
+
 return (
   <div className="main"><div className="box-two">
-  <Box title={"컴퓨터"}/>
-  <Box title={"나"} item={userSelect}/>
+  <Box title={"컴퓨터"} item={comSelect} result={gameResult}/>
+  <Box title={"나"} item={userSelect} result={gameResult}/>
   </div>
 
   <button onClick={()=>play("scissors")}>가위</button>
