@@ -17,9 +17,7 @@ const Box = (props) => {
     <div className = {`box-deco ${result}`}>
       <h3>{props.title}</h3>
       <img
-        className="img-size"
-        alt="img"
-        src={props.item && props.item.img}
+        className="img-size" src={props.item && props.item.img}
       ></img>
       <h3>{result}</h3>
     </div>

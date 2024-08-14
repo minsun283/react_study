@@ -13,6 +13,7 @@
 .box-two{
   display: flex;
   justify-content: center;
+  wrap:nowrap;
 }
 
 .main{

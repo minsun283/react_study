@@ -36,7 +36,6 @@ const play=(pick)=>{
   
 }
 
-
 const computerPick=()=>{
   let arrayGame = Object.keys(choice);
   let randomNum = Math.floor(Math.random() * arrayGame.length);
