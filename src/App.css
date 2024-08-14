@@ -3,17 +3,20 @@
 }
 
 .box-deco {
-  width: 400px;
+  width: 30%;
   height: 500px;
   border: 15px solid pink;
   text-align: center;
   margin: 20px;
+  object-fit: cover;
+  overflow: auto;
 }
 
 .box-two{
   display: flex;
   justify-content: center;
-  wrap:nowrap;
+  flex-wrap:wrap;
+  
 }
 
 .main{
