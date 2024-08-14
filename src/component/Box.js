@@ -14,7 +14,7 @@ const Box = (props) => {
 
 
   return (
-    <div className={`box-deco ${result}`}>
+    <div className = {`box-deco ${result}`}>
       <h3>{props.title}</h3>
       <img
         className="img-size"
