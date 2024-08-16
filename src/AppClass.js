@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "./App.css";
-import Box from "./component/Box";
+import BoxClass from "./component/BoxClass";
 
 
 
@@ -65,8 +65,8 @@ computerPick=()=>{
   render() {
     return (
         <div className="main"><div className="box-two">
-        <Box title="컴퓨터" item={this.state.comSelect} result={this.state.gameResult}/>
-        <Box title="나" item={this.state.userSelect} result={this.state.gameResult}/>
+        <BoxClass title="컴퓨터" item={this.state.comSelect} result={this.state.gameResult}/>
+        <BoxClass title="나" item={this.state.userSelect} result={this.state.gameResult}/>
         </div>
       
         <button onClick={()=>this.play("scissors")}>가위</button>
